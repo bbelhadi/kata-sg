@@ -1,0 +1,30 @@
+{
+  "name": "kata-sg",
+  "version": "1.0.0",
+  "description": "Kata from SG",
+  "repository": "https://github.com/bbelhadi/kata-sg",
+  "main": "index.js",
+  "scripts": {
+    "start-server": "node index",
+    "cucumbertest": "node node_modules/.bin/cucumber-js -f json:report/cucumber_report.json",
+    "launchTest": "start-server-and-test start-server http://localhost:3000 cucumbertest",
+    "report": "node report.js",
+    "test": "npm run launchTest && npm run report",
+    "unit": "mocha"
+  },
+  "author": "BELHADI Bouziane <bbelhadi@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "express": "^4.16.4",
+    "cucumber-html-reporter": "^4.0.4",
+    "start-server-and-test": "^1.7.4"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "chai": "^4.2.0",
+    "cucumber": "^5.0.2",
+    "mocha": "^5.2.0",
+    "nodemon": "^1.18.4"
+  }
+}
